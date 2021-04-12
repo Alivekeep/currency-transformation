@@ -1,0 +1,28 @@
+{
+  "name": "currency-transformer",
+  "version": "1.0.0",
+  "description": "Currency transformation util",
+  "repository": "https://github.com/Alivekeep/currency-transformer.git",
+  "author": "Alivekeep",
+  "license": "MIT",
+  "files": [
+    "dist/**/*"
+  ],
+  "types": "dist/index.d.ts",
+  "main": "dist/index.js",
+  "scripts": {
+    "start:ts-node": "ts-node -r tsconfig-paths/register -P tsconfig.json src/main.ts",
+    "start:dev": "tsc-watch -p tsconfig.json --onSuccess \"npm run start:ts-node\"",
+    "build": "tsc -p tsconfig.json"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.37",
+    "ts-node": "^9.1.1",
+    "tsc-watch": "^4.2.9",
+    "tsconfig-paths": "^3.9.0",
+    "typescript": "^4.2.4"
+  },
+  "dependencies": {
+    "bignumber.js": "^9.0.1"
+  }
+}
