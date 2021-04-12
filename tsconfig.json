@@ -13,10 +13,7 @@
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "strictNullChecks": true,
-    "moduleResolution": "node",
-    "paths": {
-      "@/*": ["*"]
-    }
+    "moduleResolution": "node"
   },
   "exclude": ["node_modules", "dist", "test"]
 }

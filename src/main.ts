@@ -12,7 +12,6 @@ export class CurrencyTransformation {
 
   /**
    * Conversion method. Possible direct convert or through all currencies
-   * @param input - input data
    */
   public convert(input: ConvertInputDto): number {
     const currencyFrom: CurrencyList = input.from;
@@ -70,9 +69,6 @@ export class CurrencyTransformation {
 
   /**
    * Internal method for calculating rates
-   * @param from Currency
-   * @param to Currency
-   * @param rates List of rates
    */
   protected getRate(from: CurrencyList, to: CurrencyList, rates: Rates): BigNumber {
     if (to === this.baseCurrency) {
