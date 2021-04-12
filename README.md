@@ -1,9 +1,15 @@
 # Currency transformation util
 
+### Installation
+
+```bash
+yarn add currency-transformation
+```
+
 ### How to usage
 
 ```typescript
-import { CurrencyTransformation, CurrencyList } from 'currency-transformer';
+import { CurrencyTransformation, CurrencyList } from 'currency-transformation';
 
 const currencyTransformation = new CurrencyTransformation();
 
