@@ -26,6 +26,11 @@ export class ConvertInputDto {
   public rates: Rates;
 
   /**
+   * Base currency
+   */
+  public baseCurrency: CurrencyList;
+
+  /**
    * One or two digits after comma
    */
   public moneyFormat?: boolean;

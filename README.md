@@ -11,6 +11,7 @@ const amount = currencyTransformation.convert({
   amount: 100,
   from: CurrencyList.USD,
   to: CurrencyList.UAH,
+  baseCurrency: CurrencyList.UAH, // should be 1 as value in rates list
   moneyFormat: true,
   crossFormat: false,
   rates: {

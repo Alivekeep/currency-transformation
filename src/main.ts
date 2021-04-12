@@ -1,7 +1,6 @@
 import { BigNumber } from 'bignumber.js';
 
 import { CurrencyList } from './enum/currency.enum';
-import { baseCurrency } from './const/common.const';
 import { ConvertInputDto } from './dto/convert-input.dto';
 import { Rates } from './types/rates.type';
 
@@ -9,11 +8,7 @@ export class CurrencyTransformation {
   /**
    * Base currency, need for conversion
    */
-  private readonly baseCurrency: CurrencyList;
-
-  constructor() {
-    this.baseCurrency = baseCurrency;
-  }
+  private baseCurrency: CurrencyList;
 
   /**
    * Conversion method. Possible direct convert or through all currencies
@@ -22,6 +17,8 @@ export class CurrencyTransformation {
   public convert(input: ConvertInputDto): number {
     const currencyFrom: CurrencyList = input.from;
     const currencyTo: CurrencyList = input.to;
+
+    this.baseCurrency = input.baseCurrency;
 
     const amount = new BigNumber(input.amount);
 
